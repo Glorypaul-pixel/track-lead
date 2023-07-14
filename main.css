@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 2rem;
+  min-width: 400px;
+}
+input {
+  width: 60%;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+}
+button {
+  background-color: rgba(89, 9, 132, 0.926);
+  padding: 1rem;
+  border: none;
+  color: white;
+  font-weight: 900;
+}
+
+ul {
+  list-style-type: none;
+  padding-top: 1rem;
+}
+a {
+  color: rgba(89, 9, 132, 0.926);
+  font-size: 1.4rem;
+}

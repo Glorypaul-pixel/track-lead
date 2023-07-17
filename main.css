@@ -18,6 +18,7 @@ button {
   border: none;
   color: white;
   font-weight: 900;
+  cursor: pointer;
 }
 
 ul {

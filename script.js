@@ -6,7 +6,6 @@ const deleteBtn = document.getElementById("dlt-btn");
 console.log(localStorage.getItem("myLeads"));
 const tabBtn = document.getElementById("tab-btn");
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
-const tabs = [{ url: "kkkkkkkkkkkkkkkkkkkkkkk" }];
 
 if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
@@ -26,8 +25,11 @@ function render(leads) {
   ulEl.innerHTML = listItem;
 }
 tabBtn.addEventListener("click", function () {
-  myLeads.push(tabs[0].url);
-  localStorage.setItem("myLeads", JSON.stringify(myLeads));
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    myLeads.push(tabs[0].url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    render(myLeads);
+  });
 });
 deleteBtn.addEventListener("dblclick", function () {
   localStorage.clear();

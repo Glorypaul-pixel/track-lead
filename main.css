@@ -20,7 +20,14 @@ button {
   font-weight: 900;
   cursor: pointer;
 }
-
+.btn {
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid rgba(89, 9, 132, 0.926);
+  color: rgba(89, 9, 132, 0.926);
+  font-weight: 900;
+  cursor: pointer;
+}
 ul {
   list-style-type: none;
   padding-top: 1rem;
